@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Киселев Максим — Портфолио</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Фоновые пеллеты -->
+<div class="pellets-bg" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="#top" class="logo">
+      <span class="pac"></span>
+      Киселев Максим
+    </a>
+
+    <button class="burger" id="burger" aria-label="Меню">☰</button>
+
+    <nav class="nav" id="nav">
+      <a href="#about">О себе</a>
+      <a href="#skills">Навыки</a>
+      <a href="#portfolio">Работы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__pac"></div>
+      <h1 class="hero__title">Киселев Максим</h1>
+      <p class="hero__subtitle">Студент группы ФИТ-241</p>
+      <p class="hero__score">SCORE: <span id="score">000000</span></p>
+      <a href="#contacts" class="btn">▶ Связаться</a>
+    </div>
+    <div class="pellets"></div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section__title"><span class="ghost ghost--red"></span>О себе</h2>
+      <p>Меня зовут Максим, учусь в группе ФИТ-241. Изучаю веб-разработку: HTML, CSS, JavaScript, jQuery.</p>
+      <p>Люблю разбираться, как всё устроено под капотом, и делать интерфейсы живыми.</p>
+      <ul class="achievements">
+        <li>Выполнил лабораторные работы по HTML и CSS</li>
+        <li>Освоил Flexbox, Grid и базовый jQuery</li>
+        <li>Разбираюсь в Git на базовом уровне</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills" class="section section--alt">
+    <div class="container">
+      <h2 class="section__title"><span class="ghost ghost--pink"></span>Навыки</h2>
+
+      <div class="carousel">
+        <button class="carousel__btn" id="prevSkill" aria-label="Назад">◀</button>
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="skillTrack">
+            <div class="skill"><h3>HTML5</h3><div class="bar"><div style="width:70%"></div></div><span>70%</span></div>
+            <div class="skill"><h3>CSS3</h3><div class="bar"><div style="width:65%"></div></div><span>65%</span></div>
+            <div class="skill"><h3>JavaScript</h3><div class="bar"><div style="width:50%"></div></div><span>50%</span></div>
+            <div class="skill"><h3>jQuery</h3><div class="bar"><div style="width:45%"></div></div><span>45%</span></div>
+            <div class="skill"><h3>Git</h3><div class="bar"><div style="width:55%"></div></div><span>55%</span></div>
+            <div class="skill"><h3>Figma</h3><div class="bar"><div style="width:40%"></div></div><span>40%</span></div>
+          </div>
+        </div>
+        <button class="carousel__btn" id="nextSkill" aria-label="Вперёд">▶</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2 class="section__title"><span class="ghost ghost--cyan"></span>Работы</h2>
+      <div class="portfolio" id="portfolioGrid">
+        <p class="loading">Загрузка работ…</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="section section--alt">
+    <div class="container">
+      <h2 class="section__title"><span class="ghost ghost--orange"></span>Контакты</h2>
+
+      <ul class="contacts">
+        <li>📧 <a href="mailto:maximkem2004@gmail.com">maximkem2004@gmail.com</a></li>
+        <li>🐙 <a href="https://github.com/LoliIRL" target="_blank" rel="noopener">github.com/LoliIRL</a></li>
+      </ul>
+
+      <form class="form" id="contactForm" novalidate>
+        <h3 class="form__title">Форма обратной связи</h3>
+
+        <label class="form__field">
+          <span>Имя *</span>
+          <input type="text" name="name" id="fieldName" placeholder="Как вас зовут?">
+          <em class="form__error" data-for="name"></em>
+        </label>
+
+        <label class="form__field">
+          <span>Email *</span>
+          <input type="email" name="email" id="fieldEmail" placeholder="you@example.com">
+          <em class="form__error" data-for="email"></em>
+        </label>
+
+        <label class="form__field">
+          <span>Сообщение *</span>
+          <textarea name="message" id="fieldMessage" rows="4" placeholder="Ваше сообщение…"></textarea>
+          <em class="form__error" data-for="message"></em>
+        </label>
+
+        <button type="submit" class="btn">▶ Отправить</button>
+        <p class="form__status" id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Киселев Максим · ФИТ-241</p>
+    <p class="footer__hint">GAME OVER · INSERT COIN</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Наверх">▲</button>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__overlay" data-close></div>
+  <div class="modal__box" role="dialog" aria-modal="true">
+    <button class="modal__close" data-close aria-label="Закрыть">✕</button>
+    <h3 class="modal__title" id="modalTitle">Заголовок</h3>
+    <p class="modal__text" id="modalText">Описание работы.</p>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

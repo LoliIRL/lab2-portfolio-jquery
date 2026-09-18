@@ -1,0 +1,8 @@
+[
+  { "title": "Лаба №1", "description": "Страница-визитка в стиле Pac-Man с адаптивной вёрсткой.", "icon": "👻" },
+  { "title": "Лаба №2", "description": "Динамика на jQuery: галерея из JSON, модальные окна, слайдер навыков.", "icon": "🍒" },
+  { "title": "Лаба №3", "description": "Калькулятор на чистом JavaScript.", "icon": "⭐" },
+  { "title": "Пет-проект", "description": "ToDo-лист с сохранением в LocalStorage.", "icon": "📋" },
+  { "title": "Пет-проект", "description": "Погодное приложение на OpenWeather API.", "icon": "🌤️" },
+  { "title": "Курсовая", "description": "Веб-интерфейс системы учёта заявок.", "icon": "📊" }
+]
