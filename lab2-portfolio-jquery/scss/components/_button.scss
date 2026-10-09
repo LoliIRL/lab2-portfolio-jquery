@@ -1,0 +1,46 @@
+@use '../utils' as *;
+
+.button {
+  display: inline-block;
+  padding: rem(14px) rem(24px);
+  background: var(--color-primary);
+  color: #000;
+  border: 3px solid #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+  box-shadow: 4px 4px 0 var(--color-danger);
+
+  &:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-danger);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  &:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: 4px 4px 0 var(--color-danger);
+  }
+
+  &--primary {
+    background: var(--color-primary);
+    color: #000;
+  }
+
+  &--small {
+    padding: rem(10px) rem(16px);
+    font-size: 0.7rem;
+    box-shadow: 3px 3px 0 var(--color-danger);
+  }
+}

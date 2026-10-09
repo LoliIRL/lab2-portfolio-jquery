@@ -1,0 +1,42 @@
+@use '../utils' as *;
+
+.skill {
+  min-width: 100%;
+  box-sizing: border-box;
+  background: var(--color-panel);
+  padding: $space-lg;
+  border-right: 1px dashed var(--color-border);
+
+  &__name {
+    font-size: 0.95rem;
+    margin-bottom: $space-sm;
+    color: var(--color-text);
+  }
+
+  &__bar {
+    height: 10px;
+    background: var(--color-border);
+    overflow: hidden;
+    margin-bottom: $space-xs;
+    border: 1px solid var(--color-border);
+  }
+
+  &__fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    box-shadow: 0 0 12px var(--color-primary);
+  }
+
+  &__value {
+    font-size: 0.75rem;
+    color: var(--color-primary);
+  }
+
+  @include respond-to('tablet') {
+    min-width: 50%;
+  }
+
+  @include respond-to('desktop') {
+    min-width: 33.3333%;
+  }
+}

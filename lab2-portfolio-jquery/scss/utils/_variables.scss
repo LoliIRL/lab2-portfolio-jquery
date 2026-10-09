@@ -1,0 +1,41 @@
+$font-primary: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$font-mono: "Press Start 2P", monospace;
+
+$breakpoints: (
+  'mobile': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+);
+
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 40px;
+
+$radius: 6px;
+$transition: 0.2s ease;
+
+$theme-light: (
+  'bg': #f5f5fa,
+  'bg-alt': #e8ecff,
+  'panel': #ffffff,
+  'border': #d0d0e0,
+  'text': #1a1a2e,
+  'muted': #6b7280,
+  'primary': #d4a017,
+  'danger': #e63946,
+  'accent': #6d28d9,
+);
+
+$theme-dark: (
+  'bg': #000000,
+  'bg-alt': #0a0a2a,
+  'panel': #0f0f2a,
+  'border': #1a1a4a,
+  'text': #ffffff,
+  'muted': #9aa0c0,
+  'primary': #ffcc00,
+  'danger': #ff2b2b,
+  'accent': #ffb8ff,
+);

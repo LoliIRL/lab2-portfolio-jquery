@@ -1,0 +1,51 @@
+@use '../utils' as *;
+
+.pac,
+.hero__pac {
+  display: inline-block;
+  background: var(--color-primary);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 20px var(--color-primary);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -50%);
+    width: 60%;
+    height: 60%;
+    background: var(--color-bg);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+  }
+}
+
+.pac {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: $space-sm;
+}
+
+.hero__pac {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto $space-lg;
+  animation: chomp 0.4s infinite alternate;
+
+  @include respond-to('tablet') {
+    width: 130px;
+    height: 130px;
+  }
+
+  @include respond-to('desktop') {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@keyframes chomp {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-30deg); }
+}

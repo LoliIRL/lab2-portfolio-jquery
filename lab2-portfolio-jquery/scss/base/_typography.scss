@@ -1,0 +1,22 @@
+@use '../utils' as *;
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+}
+
+.logo,
+.button,
+.hero__score,
+.footer__hint,
+.burger,
+.carousel__btn,
+.to-top,
+.form__title,
+.modal__title,
+.skill__value,
+.section__title,
+.pac,
+.ghost {
+  font-family: $font-mono;
+  letter-spacing: 1px;
+}

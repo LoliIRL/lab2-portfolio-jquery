@@ -1,0 +1,58 @@
+@use '../utils' as *;
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  &--open {
+    display: block;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+  }
+
+  &__box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-panel);
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 0 40px var(--color-primary);
+    padding: $space-lg;
+    max-width: 90vw;
+    width: 400px;
+  }
+
+  &__title {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    margin-bottom: $space-md;
+  }
+
+  &__text {
+    color: var(--color-text);
+  }
+
+  &__close {
+    position: absolute;
+    top: $space-xs;
+    right: $space-sm;
+    background: transparent;
+    color: var(--color-danger);
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    line-height: 1;
+
+    &:hover {
+      color: var(--color-text);
+    }
+  }
+}

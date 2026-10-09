@@ -1,0 +1,53 @@
+@use '../utils' as *;
+
+.hero {
+  padding: rem(60px) 0 rem(40px);
+  text-align: center;
+  background: radial-gradient(circle at 50% 0%, var(--color-bg-alt) 0%, var(--color-bg) 70%);
+  position: relative;
+  overflow: hidden;
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: $space-md;
+    color: var(--color-primary);
+    text-shadow: 0 0 12px var(--color-primary);
+  }
+
+  &__subtitle {
+    color: var(--color-muted);
+    margin-bottom: $space-md;
+  }
+
+  &__score {
+    font-size: 0.75rem;
+    color: var(--color-text);
+    margin-bottom: $space-lg;
+    letter-spacing: 2px;
+  }
+
+  &__score-value {
+    color: var(--color-primary);
+  }
+
+  @include respond-to('tablet') {
+    padding: rem(80px) 0 rem(60px);
+    &__title { font-size: 1.8rem; }
+  }
+
+  @include respond-to('desktop') {
+    &__title { font-size: 2.2rem; }
+  }
+}
+
+.pellets-line {
+  position: absolute;
+  bottom: $space-md;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background-image: radial-gradient(circle, var(--color-text) 2px, transparent 2px);
+  background-size: 24px 6px;
+  background-position: center;
+  opacity: 0.6;
+}
