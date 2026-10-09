@@ -1,0 +1,14 @@
+{
+  "name": "lab2-portfolio-jquery",
+  "version": "1.0.0",
+  "description": "Лабораторные №1-3: визитка, jQuery, Sass",
+  "scripts": {
+    "sass:dev": "sass --watch scss/main.scss:dist/css/main.css",
+    "build": "sass --no-source-map --style=compressed scss/main.scss:dist/css/main.css"
+  },
+  "author": "Киселев Максим, ФИТ-241",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

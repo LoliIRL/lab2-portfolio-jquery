@@ -1,0 +1,31 @@
+@use '../utils' as *;
+
+.ghost {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px 10px 2px 2px;
+  margin-right: $space-sm;
+  vertical-align: middle;
+  position: relative;
+  box-shadow: 0 0 12px currentColor;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+  }
+
+  &::before { left: 4px; }
+  &::after  { right: 4px; }
+
+  &--red    { background: var(--color-danger); color: var(--color-danger); }
+  &--pink   { background: var(--color-accent); color: var(--color-accent); }
+  &--cyan   { background: #00ffff; color: #00ffff; }
+  &--orange { background: #ffb852; color: #ffb852; }
+}

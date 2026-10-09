@@ -1,0 +1,27 @@
+@use '../utils' as *;
+
+.footer {
+  background: var(--color-panel);
+  border-top: 2px solid var(--color-border);
+  padding: $space-lg 0;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+
+  &__text {
+    margin-bottom: $space-xs;
+  }
+
+  &__hint {
+    font-size: 0.7rem;
+    color: var(--color-danger);
+    text-shadow: 0 0 8px var(--color-danger);
+    animation: blink 1.5s infinite;
+  }
+}
+
+@keyframes blink {
+  50% { opacity: 0.3; }
+}

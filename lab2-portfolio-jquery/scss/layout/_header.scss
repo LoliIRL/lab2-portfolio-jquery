@@ -1,0 +1,109 @@
+@use '../utils' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  background: var(--color-panel);
+  border-bottom: 2px solid var(--color-border);
+  z-index: 100;
+
+  &__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: $space-md;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $space-md;
+  }
+
+  &__logo {
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    text-shadow: 0 0 8px var(--color-primary);
+  }
+
+  &__actions {
+    display: flex;
+    gap: $space-sm;
+    align-items: center;
+  }
+}
+
+.nav {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  gap: $space-sm;
+  margin-top: $space-sm;
+  padding-top: $space-sm;
+  border-top: 1px dashed var(--color-border);
+
+  &--open {
+    display: flex;
+  }
+
+  &__link {
+    color: var(--color-text);
+    font-size: 0.95rem;
+    padding: $space-xs 0;
+
+    &:hover,
+    &--active {
+      color: var(--color-primary);
+      text-shadow: 0 0 8px var(--color-primary);
+    }
+  }
+
+  @include respond-to('tablet') {
+    display: flex !important;
+    flex-direction: row;
+    width: auto;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    gap: $space-md;
+
+    &__link {
+      padding: 0;
+    }
+  }
+}
+
+.burger {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  font-size: 1.3rem;
+  padding: $space-xs $space-md;
+  cursor: pointer;
+  line-height: 1;
+
+  &:hover {
+    background: var(--color-primary);
+    color: var(--color-bg);
+  }
+
+  @include respond-to('tablet') {
+    display: none;
+  }
+}
+
+.theme-toggle {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  font-size: 1rem;
+  padding: $space-xs $space-sm;
+  cursor: pointer;
+  line-height: 1;
+
+  &:hover {
+    background: var(--color-primary);
+    color: var(--color-bg);
+  }
+}

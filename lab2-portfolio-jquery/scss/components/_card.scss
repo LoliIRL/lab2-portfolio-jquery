@@ -1,0 +1,35 @@
+@use '../utils' as *;
+
+.card {
+  background: var(--color-panel);
+  padding: $space-md;
+  border: 2px solid var(--color-border);
+  transition: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+    transform: translateY(-3px);
+  }
+
+  &__thumb {
+    font-size: 2.5rem;
+    text-align: center;
+    background: var(--color-bg);
+    border: 2px dashed var(--color-border);
+    padding: $space-lg 0;
+    margin-bottom: $space-md;
+  }
+
+  &__title {
+    font-size: 1rem;
+    margin-bottom: $space-xs;
+    color: var(--color-primary);
+  }
+
+  &__text {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+  }
+}

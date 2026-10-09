@@ -1,0 +1,73 @@
+@use '../utils' as *;
+
+.form {
+  max-width: 480px;
+  margin: $space-xl auto 0;
+  background: var(--color-panel);
+  border: 2px solid var(--color-border);
+  padding: $space-lg;
+
+  &__title {
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    margin-bottom: $space-md;
+    text-align: center;
+  }
+
+  &__field {
+    display: block;
+    margin-bottom: $space-md;
+
+    &--invalid {
+      .form__input,
+      .form__textarea {
+        border-color: var(--color-danger);
+        box-shadow: 0 0 10px var(--color-danger);
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    margin-bottom: $space-xs;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: $space-sm $space-md;
+    background: var(--color-bg);
+    color: var(--color-text);
+    border: 2px solid var(--color-border);
+    font: inherit;
+    resize: vertical;
+    transition: 0.15s;
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 10px var(--color-primary);
+    }
+  }
+
+  &__error {
+    display: block;
+    color: var(--color-danger);
+    font-size: 0.75rem;
+    min-height: 1em;
+    margin-top: $space-xs;
+    font-style: normal;
+  }
+
+  &__status {
+    margin-top: $space-md;
+    font-size: 0.85rem;
+    text-align: center;
+    min-height: 1.2em;
+
+    &--success { color: var(--color-primary); }
+    &--error   { color: var(--color-danger);  }
+  }
+}

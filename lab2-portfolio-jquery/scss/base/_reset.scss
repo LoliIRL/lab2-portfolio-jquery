@@ -1,0 +1,39 @@
+@use '../utils' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: rem(80px);
+}
+
+body {
+  font-family: $font-primary;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: background $transition, color $transition;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color $transition;
+
+  &:hover {
+    color: var(--color-text);
+  }
+}
